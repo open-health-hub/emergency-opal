@@ -23,6 +23,20 @@ class PatientsForTriageList(core.patient_lists.TaggedPatientList):
 
     tag = 'triage'
 
+    template_name = 'triage_list.html'
+
+    schema = [
+        models.Demographics,
+        models.Location,
+        Observation,
+        models.EmergencyDepartmentTriage
+    ]
+
+class PatientsWaitingToBeSeen(core.patient_lists.TaggedPatientList):
+    display_name = 'Patients Waiting To Be Seen'
+
+    tag = 'waiting'
+
     schema = [
         models.Demographics,
         models.Location,

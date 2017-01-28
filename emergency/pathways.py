@@ -1,5 +1,6 @@
 from pathway import pathways
 from emergency import models
+from obs.models import Observation
 
 class BookingIn(pathways.PagePathway):
     display_name = 'ED Booking In'
@@ -15,3 +16,16 @@ class BookingIn(pathways.PagePathway):
     def redirect_url(self, patient):
         return "/#/list/triage"
 
+class Triage(pathways.PagePathway):
+    display_name = "Triage Entry"
+    slug = "triage"
+    steps = (models.Demographics, Observation, models.EmergencyDepartmentTriage,)
+
+    def save(self, data, user):
+        patient = super(Triage, self).save(data, user)
+        episode = patient.episode_set.last()
+        episode.set_tag_names(["waiting"], None)
+        return patient
+
+    def redirect_url(self, patient):
+        return "/#/list/waiting"
