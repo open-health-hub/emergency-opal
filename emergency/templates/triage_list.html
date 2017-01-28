@@ -1,0 +1,22 @@
+{% extends 'patient_lists/spreadsheet_list.html' %}
+{% block left_panel %}
+<div class="panel panel-active screen-only hidden-sm side-bar" ng-show="episode">
+  <div class="panel-heading">
+    <b>
+      <i class="fa fa-user"></i>
+      <span ng-show="profile.can_see_pid()">
+        [[ episode.demographics[0].first_name ]] [[ episode.demographics[0].surname ]]
+      </span>
+    </b>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" ng-show="profile.can_see_pid()">
+      <p>
+        <a class="btn btn-primary screen-only" ng-href='[[ "#/patient/" + episode.demographics[0].patient_id + "/" + episode.id]]'>
+          <i class="fa fa-search-plus"></i> Triage Patient
+        </a>
+      </p>
+    </li>
+  </ul>
+</div>
+{% endblock %}
