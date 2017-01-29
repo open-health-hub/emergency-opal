@@ -15,8 +15,8 @@ class Diagnosis(models.Diagnosis): pass
 class PastMedicalHistory(models.PastMedicalHistory): pass
 class Treatment(models.Treatment): pass
 class Investigation(models.Investigation): pass
-class SymptomComplex(models.Investigation): pass
-class PatientConsultation(models.Investigation): pass
+class SymptomComplex(models.SymptomComplex): pass
+class PatientConsultation(models.PatientConsultation): pass
 
 class EmergencyDepartmentTriage(models.EpisodeSubrecord):
     _is_singleton = True
