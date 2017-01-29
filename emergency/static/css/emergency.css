@@ -1,0 +1,82 @@
+body {
+  background-color: #EEE; }
+
+h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small {
+  color: #FFF; }
+
+.bg-primary {
+  background-color: #806179; }
+
+.bg-secondary {
+  background-color: #CDA245; }
+
+.panel.panel-primary {
+  border-color: #806179; }
+
+.panel.panel-primary > .panel-heading {
+  background-color: #806179;
+  color: white;
+  border-color: #806179; }
+
+h5 {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 14px; }
+
+.btn-primary {
+  background-color: #806179;
+  border-color: #806179; }
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #765973;
+  border-color: #765973; }
+
+.btn-secondary {
+  background-color: #CDA245;
+  border-color: #CDA245; }
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #BB943F;
+  border-color: #BB943F; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #343637; }
+
+.navbar-nav li:hover,
+.navbar-nav li:hover a,
+.navbar-nav li.active a,
+.navbar-nav li.active {
+  background: #cbc9c8; }
+
+.panel-primary .panel-default .panel-heading,
+.panel-default .panel-heading {
+  border-bottom: 3px solid #CDA245; }
+
+.modal-header {
+  background: #806179; }
+
+.loading {
+  background-color: #343637;
+  color: white; }
+
+/* ngProgress overrides */
+.ngProgressLiteBar {
+  background-color: #CDA245;
+  box-shadow: 0 0 10px 0;
+  /* Inherits the font color */ }
+
+.smpl-step > .smpl-step-step > .progress > .progress-bar {
+  background-color: #CDA245; }
+
+a.list-group-item:hover, a.list-group-item:focus {
+  text-decoration: none;
+  background-color: #4d5051;
+  color: #FFF; }
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+  background-color: #343637; }
+
+/*# sourceMappingURL=emergency.css.map */
