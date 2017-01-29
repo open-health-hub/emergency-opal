@@ -11,7 +11,9 @@ class Application(application.OpalApplication):
         # Uncomment this if you want to implement custom dynamic flows.
         # 'js/emergency/flow.js',
     ]
-
+    styles = [
+        'css/emergency.css',
+    ]
     menuitems = [
         dict(
             href='pathway/#/booking', display='Book In', icon='fa fa-plus',
